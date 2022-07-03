@@ -22,6 +22,8 @@ it('calls swapi to get people with promise', () => {
   })
 })
 
+
+// mocks / spies
 it('getPeople returns count and results', () => {
   mockFetch = jest.fn().mockReturnValue(Promise.resolve({
     json: () => Promise.resolve({

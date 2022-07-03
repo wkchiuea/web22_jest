@@ -27,3 +27,18 @@ it('works with undefined and null input', () => {
 it('does not return more than 3 matches', () => {
   expect(googleSearch('.com', dbMock).length).toEqual(3)
 });
+
+
+// group the tests
+describe("googleSearch", () => {
+  it('silly test', () => {
+    expect('hello').toBe('hello');
+  });
+  it('is running', () => {
+    expect(googleSearch('dog', dbMock)).toExist;
+  });
+  
+  it('is is working', () => {
+    expect(googleSearch('dog', dbMock)).toEqual(['dogs.com', 'dogpictures.com'])
+  });
+});
